@@ -1,6 +1,8 @@
 package com.example.ejercicio6repaso
 
 import android.content.Context
+import android.graphics.Color
+import android.graphics.Color.green
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.MotionEvent
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val texto :String= "Finalizar"
     private val texto2 :String= "Wayne"
+    private val texto3 :String="Joker"
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,17 +27,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.Batman.isVisible = false
 
 
         binding.button.setOnClickListener(){
             binding.editTextTextPersonName.isEnabled=true
             binding.editTextTextPersonName.isVisible=true
             if(binding.button.text.equals(texto)){
-                binding.editTextTextPersonName.isEnabled=false
+                binding.editTextTextPersonName.isVisible=false
             }
-            if(binding.editTextTextPersonName.text.equals(texto2)){
-                binding.button.text=texto
+            if(binding.editTextTextPersonName.text.contains(texto2)){
+                binding.Batman.isVisible=true
+
+            }else{
+                if(binding.editTextTextPersonName.text.contains(texto3)){
+                    //cambiar el fondo de la aplicacion al verde
+                    binding.root.setBackgroundColor(Color.parseColor("#7CFC00"))
+
+                }
             }
         }
 

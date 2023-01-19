@@ -24,6 +24,7 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:enabled="false"
+        android:focusable="true"
         android:hint="Introduce tu nombre"
         android:inputType="textPersonName"
         android:text="Introduce tu nombre"
@@ -41,4 +42,18 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <ImageView
+        android:id="@+id/Batman"
+        android:layout_width="136dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="137dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:srcCompat="@drawable/_636928ae9614a18fec33ea17ba48f2e"
+        tools:visibility="invisible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
